@@ -35,7 +35,7 @@ export default {
       console.log(Object.keys({ name: 'cc' }))
       let obj = { name: 'cc' }
       for (let i in obj) {
-        console.log(i + 'ww')
+        console.log(i )
       }
     },
   },
