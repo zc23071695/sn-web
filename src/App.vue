@@ -1,48 +1,33 @@
 <template>
   <div id="app">
     <div id="nav">
-      <h1>
-        Good Job
-      </h1>
+      <h1>Good Job</h1>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'app',
+  name: "app",
   components: {},
   data() {
     return {
-      name: 'xiaoming',
-    }
+      name: "xiaoming"
+    };
   },
   methods: {
-    fn1(user) {
-      function Range(x) {
-        this.x = x
+    fn(n) {
+      if (n == 1) {
+        return n;
+      } else {
+        return n * this.fn(n - 1);
       }
-      Range.prototype = {
-        includes: function() {
-          return true
-        },
-      }
-      Object.defineProperty(Object.prototype, 'num', {
-        value: 132,
-        enumerable: false,
-      })
-
-      var r = new Range(12)
-      console.log(Object.keys({ name: 'cc' }))
-      let obj = { name: 'cc' }
-      for (let i in obj) {
-        console.log(i )
-      }
-    },
+    }
   },
   mounted() {
-    this.fn1()
-  },
-}
+    this.fn(1);
+    console.log(this.fn(5));
+  }
+};
 </script>
 <style lang="scss">
 #app {
