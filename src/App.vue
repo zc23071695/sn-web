@@ -2,6 +2,7 @@
   <div id="app">
     <div id="nav">
       <h1>Good Job</h1>
+      <div class="inner">demo</div>
     </div>
   </div>
 </template>
@@ -36,5 +37,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  .inner{
+    color: red;
+  }
 }
 </style>
